@@ -1,0 +1,8 @@
+// Buchstabe richtig: er wird an passender Stelle eingetragen! Bachte: dopplete Buchstaben in einem Wort--> Helene
+
+// Buchstaben nicht enthalten: Computer malt ersten Strich des Galgenmännchens "Falsch geraten!"--> Helene
+
+// Buchstabe schon geraten: Computer gibt zurück, dass schon geraten wurde--> Helene
+
+// Flasche Zeichen, Zahlen oder mehrere Buchstaben: Computer sagt cheater!--> Helene
+
