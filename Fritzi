@@ -1,6 +1,6 @@
 public static void main(String[] args) {
 
-String[] wortListe = {"programmieren", "hangman", "computer", "java", "code", "entwicklung", "spiel"};
+String[] wortListe = {"adventskranz", "adventszeit", "bratapfel", "besinnlichkeit", "bescherung", "christbaumkugel", "christbaumschmuck", "dezember", "feuerzangenbowle", "gewuerzspekulatius", "gluehwein", "gloeckchen", "gemuetlichkeit", "heiligabend", "kerzenschein", "krippenspiel", "lichterglanz", "lametta", "lebkuchenhaus", "marzipan", "mandarinen", "mistelzweig", "nikolaustag", "nussknacker", "plaetzchen", "plaetzchenduft", "Schneeflocken", "Schneemann", "Strohstern", "tannenbaum", "tannenzweig", "weihnachtslied", "weihnachtsfest", "weihnachtsbaeckerei", "weihnachtsmann", "winterlandschaft", "wunschzettel", "weihnachtstradition", "weihnachtsgeschichte", "zimtsterne"};
 String wortRaten = wortListe[new Random().nextInt(wortListe.length)];
 char[] gerateneBuchstaben = new char[wortRaten.length()];
 int falschGeraten = 0;
