@@ -1,0 +1,6 @@
+public static void main(String[] args) {
+
+String[] wortListe = {"programmieren", "hangman", "computer", "java", "code", "entwicklung", "spiel"};
+String wortRaten = wortListe[new Random().nextInt(wortListe.length)];
+char[] gerateneBuchstaben = new char[wortRaten.length()];
+int falschGeraten = 0;
