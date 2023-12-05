@@ -1,8 +1,49 @@
-// Buchstabe richtig: er wird an passender Stelle eingetragen! Bachte: dopplete Buchstaben in einem Wort--> Helene
+// Buchstabe richtig: er wird an passender Stelle eingetragen! Bachte: dopplete Buchstaben in einem Wort
 
-// Buchstaben nicht enthalten: Computer malt ersten Strich des Galgenmännchens "Falsch geraten!"--> Helene
+// Buchstaben nicht enthalten: Computer malt ersten Strich des Galgenmännchens "Falsch geraten!"
 
-// Buchstabe schon geraten: Computer gibt zurück, dass schon geraten wurde--> Helene
+// Buchstabe schon geraten: Computer gibt zurück, dass schon geraten wurde
 
-// Flasche Zeichen, Zahlen oder mehrere Buchstaben: Computer sagt cheater!--> Helene
+// Flasche Zeichen, Zahlen oder mehrere Buchstaben: Computer sagt cheater!
 
+
+int falscheEingaben = 0;
+char[] gerateneBuchstaben
+
+while (falscheEingaben < 10) 
+{
+            System.out.print("Gib einen Buchstaben ein: ");
+            char eingabe = scanner.next().toLowerCase().charAt(0);
+
+            if (!Character.isLetter(eingabe)) 
+            {
+                System.out.println("Schummler! Bitte gib einen Buchstaben ein.");
+                continue;
+            }
+
+            if (bereitsGeraten(eingabe, gerateneBuchstaben)) 
+            {
+                System.out.println("Du hast diesen Buchstaben bereits geraten. Versuche es erneut.");
+                continue;
+            }
+
+            if (überprüfeEingabe(eingabe, gesuchtesWort, gerateneBuchstaben)) 
+            {
+                System.out.println("Richtig geraten!");
+            } 
+            else 
+            {
+                falscheEingaben++;
+                System.out.println("Falsch geraten! Anzahl der Versuche übrig: " + (10 - falscheEingaben));
+                zeigeGalgenmännchen(falscheEingaben);
+            }
+}
+
+
+Die Schleife läuft, solange die Anzahl der falschen Versuche (falschgeraten) kleiner ist als 10
+Der Benutzer wird aufgefordert, einen Buchstaben einzugeben. 
+Die Eingabe wird in Kleinbuchstaben umgewandelt, um die Fallunempfindlichkeit zu gewährleisten.
+Wenn die eingegebene Zeichenkette kein Buchstabe ist, gibt das Programm eine Warnung aus und springt weiter in der Schleife
+Wenn der Buchstabe bereits geraten wurde, gibt das Programm eine entsprechende Meldung aus und springt zur nächsten Iteration der Schleife.
+Wenn der geratene Buchstabe im zu erratenden Wort vorhanden ist, gibt das Programm eine positive Rückmeldung aus.
+Andernfalls, wenn der geratene Buchstabe falsch ist, erhöht das Programm die Anzahl der falschen Versuche um eins, gibt das Programm eine entsprechende Meldung aus,  zeigt die Anzahl der verbleibenden Versuche an und ruft die Methode displayHangman auf, um den aktuellen Stand des Galgens anzuzeigen.
