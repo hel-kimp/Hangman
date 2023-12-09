@@ -75,7 +75,7 @@ public class HangmanV1
 		return false;
 	}
 
-	private static void zeichneHangman(int versuche) {
+	private static void zeichneHangman(int versuche) { //ASCII- Hangman wird gezeichnet
 		System.out.println();
 		System.out.println("  _____");
 		System.out.println("  |   |");
