@@ -42,20 +42,21 @@ public class HangmanV1
 				System.out.println("Falsch geraten! Anzahl der Versuche übrig: " + (10 - falscheEingaben));
 				zeichneHangman(falscheEingaben);
 			}
-		}
+		
 
 		if (wortRaten(gerateneBuchstaben))
 		{
 			System.out.println("Herzlichen Glückwunsch, du hast gewonnen! Das Wort ist: " + wortRaten);
+			break;
 		
 		}
-
+	}
 
 		if (falscheEingaben == 6)
 		{
 			System.out.println("Du hast leider verloren. Das richtige Wort wäre gewesen: " + wortRaten);
 		}
-	
+	scanner.close();
 	}
 	
 	static String anzeigeWort(String word, char[] geratenerBuchstabe) {
