@@ -32,7 +32,7 @@ public class HangmanV1
 				System.out.println("Du hast diesen Buchstaben bereits geraten. Versuche es erneut.");
 				continue;
 			}
-			if (überprüfeEingabe(eingabe, wortRaten, gerateneBuchstaben))
+			if (ueberprüfeEingabe(eingabe, wortRaten, gerateneBuchstaben))
 			{
 				System.out.println("Richtig geraten!");
 			}
@@ -42,7 +42,14 @@ public class HangmanV1
 				System.out.println("Falsch geraten! Anzahl der Versuche übrig: " + (10 - falscheEingaben));
 				zeichneHangman(falscheEingaben);
 			}
-		
+
+
+
+			  //hier war das nicht ausgegeben, sonst werden die erratende buchstaben nicht angezeigt
+
+            		System.out.println(anzeigeWort(wortRaten, gerateneBuchstaben));
+		}
+
 
 		if (wortRaten(gerateneBuchstaben))
 		{
@@ -71,10 +78,7 @@ public class HangmanV1
 		return anzeige.toString();
 		}
 
-	private static boolean überprüfeEingabe(char eingabe, String wortRaten, char[] gerateneBuchstaben) {
-		
-		return false;
-	}
+
 
 	private static void zeichneHangman(int versuche) { //ASCII- Hangman wird gezeichnet
 		System.out.println();
@@ -116,17 +120,22 @@ public class HangmanV1
 		System.out.println("=======");
 	}
 
-	static boolean bereitsGeraten(char guess, String word, char[] gerateneBuchstaben)
-	{
-		boolean richtigGeraten = false;
-		for (int i = 0; i < word.length(); i++) {
-			if (word.charAt(i) == guess) {
-				gerateneBuchstaben[i] = guess;
-				richtigGeraten = true;
-			}
-		}
-		return richtigGeraten;
-	}
+//bereitsGeraten und ueberpruefeEingaben, waren noch falsch definiert 
+
+ static boolean bereitsGeraten(char[] gerateneBuchstaben, char guess) {
+        return bereitsGeraten(guess,gerateneBuchstaben);
+    }
+
+    static boolean ueberpruefeEingabe(char guess, String word, char [] gerateneBuchstaben) {
+        boolean richtigGeraten = false;
+        for (int i = 0; i < word.length(); i++) {
+            if (word.charAt(i) == guess) {
+                gerateneBuchstaben[i] = guess;
+                richtigGeraten = true;
+            }
+        }
+        return richtigGeraten;
+    }
 	static boolean wortRaten(char[] geratenenBuchstaben) {
 		for (char letter : geratenenBuchstaben) {
 			if (letter == 0) {
