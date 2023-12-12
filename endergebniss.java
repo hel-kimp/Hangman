@@ -33,7 +33,7 @@ public class neu
                 System.out.println("Richtig geraten!");
             } else {
                 falscheEingaben++;
-                System.out.println("Falsch geraten! Anzahl der Versuche übrig: " + (10 - falscheEingaben));
+                System.out.println("Falsch geraten! Anzahl der Versuche übrig: " + (6 - falscheEingaben));
                 zeichneHangman(falscheEingaben);
             }
         //war vorher hier klammer
