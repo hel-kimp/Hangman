@@ -44,23 +44,26 @@ public class HangmanV1
 			}
 
 
+
 			  //hier war das nicht ausgegeben, sonst werden die erratende buchstaben nicht angezeigt
 
             		System.out.println(anzeigeWort(wortRaten, gerateneBuchstaben));
 		}
 
+
 		if (wortRaten(gerateneBuchstaben))
 		{
 			System.out.println("Herzlichen Glückwunsch, du hast gewonnen! Das Wort ist: " + wortRaten);
+			break;
 		
 		}
-
+	}
 
 		if (falscheEingaben == 6)
 		{
 			System.out.println("Du hast leider verloren. Das richtige Wort wäre gewesen: " + wortRaten);
 		}
-	
+	scanner.close();
 	}
 	
 	static String anzeigeWort(String word, char[] geratenerBuchstabe) {
